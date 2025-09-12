@@ -13,9 +13,9 @@ A complete, working Elastic SIEM (Security Information and Event Management) dep
 
 ### One-Line Setup
 ```bash
-git clone <repository>
-cd elastic-siem
-./scripts/setup.sh
+git clone (https://github.com/jepjep741/my-elastic-siem.git)
+cd my-eelastic-siem
+./scripts/setup-fixed.sh
 ```
 
 ## 📋 Manual Setup Instructions
