@@ -18,7 +18,7 @@ cd my-eelastic-siem
 ./scripts/setup-fixed.sh
 ```
 
-## 📋 Manual Setup Instructions
+## 📋 Manual Setup Instructions(Optional)
 
 If you prefer to set up manually or if the script fails, follow these steps:
 
