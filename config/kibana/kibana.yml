@@ -1,0 +1,30 @@
+server.name: kibana
+server.host: 0.0.0.0
+server.port: 5601
+
+# Elasticsearch settings
+elasticsearch.hosts: ["https://elasticsearch:9200"]
+elasticsearch.username: "kibana_system"
+elasticsearch.ssl.certificateAuthorities: ["/usr/share/kibana/config/certs/ca/ca.crt"]
+elasticsearch.ssl.verificationMode: certificate
+
+# Security settings
+xpack.security.enabled: true
+xpack.security.encryptionKey: "a7a6311933d3503b89bc2dbc36572c33a8c10925eae9da3eb"
+xpack.encryptedSavedObjects.encryptionKey: "a7a6311933d3503b89bc2dbc36572c33a8c10925eae9da3eb"
+xpack.reporting.encryptionKey: "a7a6311933d3503b89bc2dbc36572c33a8c10925eae9da3eb"
+
+# Fleet settings
+xpack.fleet.enabled: true
+xpack.fleet.agents.enabled: true
+
+# SIEM settings
+xpack.securitySolution.enabled: true
+
+# Monitoring settings
+monitoring.ui.enabled: true
+monitoring.ui.container.elasticsearch.enabled: true
+
+# Performance settings
+elasticsearch.requestTimeout: 90000
+elasticsearch.shardTimeout: 60000

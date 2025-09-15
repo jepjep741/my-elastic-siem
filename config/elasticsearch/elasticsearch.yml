@@ -1,0 +1,60 @@
+cluster.name: elastic-siem
+node.name: elasticsearch-01
+
+# Network settings
+network.host: 0.0.0.0
+http.port: 9200
+
+# Discovery settings for single node
+discovery.type: single-node
+
+# Security settings
+xpack.security.enabled: true
+xpack.security.enrollment.enabled: true
+
+# SSL/TLS settings
+xpack.security.http.ssl:
+  enabled: true
+  verification_mode: certificate
+  key: certs/elasticsearch/elasticsearch.key
+  certificate: certs/elasticsearch/elasticsearch.crt
+  certificate_authorities: certs/ca/ca.crt
+
+xpack.security.transport.ssl:
+  enabled: true
+  verification_mode: certificate
+  key: certs/elasticsearch/elasticsearch.key
+  certificate: certs/elasticsearch/elasticsearch.crt
+  certificate_authorities: certs/ca/ca.crt
+
+# License settings
+xpack.license.self_generated.type: trial
+
+# SIEM specific settings
+xpack.security.authc.api_key.enabled: true
+xpack.monitoring.collection.enabled: true
+
+# Watcher settings for alerting
+xpack.watcher.enabled: true
+
+# Machine learning settings
+xpack.ml.enabled: true
+xpack.ml.max_machine_memory_percent: 30
+
+# Indices settings
+indices.query.bool.max_clause_count: 2048
+
+# Memory settings
+indices.memory.index_buffer_size: 20%
+indices.fielddata.cache.size: 30%
+
+# Thread pool settings
+thread_pool.search.size: 12
+thread_pool.search.queue_size: 10000
+thread_pool.write.size: 5
+thread_pool.write.queue_size: 5000
+
+# Logging
+logger.level: INFO
+logger.org.elasticsearch.discovery: DEBUG
+logger.org.elasticsearch.transport: INFO
