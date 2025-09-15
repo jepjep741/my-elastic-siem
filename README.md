@@ -6,7 +6,7 @@ A complete, working Elastic SIEM (Security Information and Event Management) dep
 
 ### Prerequisites
 - Podman installed
-- Podman Compose installed (`pip3 install podman-compose`)
+- Podman Compose installed (`apt/dnf instal podman podman-compose podman-docker, git -y`)
 - At least 8GB RAM available
 - 20GB+ free disk space
 - OpenSSL for certificate generation
